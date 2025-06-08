@@ -18,22 +18,22 @@ theme:
   palette:
     # Light mode
     - scheme: default
-      primary: custom  # This will use your custom CSS colors
-      accent: custom
+      primary: black
+      accent: black
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
-      primary: custom
-      accent: custom
+      primary: white
+      accent: white
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
   # Font configuration
   font:
-    text: Libre Baskerville
-    code: DM Mono
+    text: Open Sans
+    code: Ubuntu Mono
 
 # Include your custom CSS
 extra_css:
