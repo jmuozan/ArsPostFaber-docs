@@ -25,14 +25,14 @@ theme:
       primary: black
       accent: black
       toggle:
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
       primary: black  # Keep header black
       accent: black
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Switch to light mode
   # Font configuration
   font:
