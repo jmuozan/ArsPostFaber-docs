@@ -4,8 +4,8 @@ site_url: https://mydomain.org/mysite
 # Custom logo and favicon
 theme:
   name: material
-  logo: Icons/ascii_output.png
-  favicon: Icons/ascii_output.png
+  logo: icons/ascii_output.png
+  favicon: icons/ascii_output.png
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -25,14 +25,14 @@ theme:
       primary: black
       accent: black
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-sunny
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
       primary: black  # Keep header black
       accent: black
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode
   # Font configuration
   font:
