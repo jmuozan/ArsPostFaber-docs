@@ -9,10 +9,47 @@
   --md-accent-fg-color: #000000;
 }
 
-/* Dark mode colors */
+/* Dark mode colors - keep header black, only change body */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #ffffff;
-  --md-accent-fg-color: #ffffff;
+  --md-primary-fg-color: #000000;  /* Keep header black */
+  --md-accent-fg-color: #000000;   /* Keep accent black */
+}
+
+/* Force header to stay black in both modes */
+.md-header {
+  background-color: #000000 !important;
+}
+
+/* Force all header elements to have proper colors */
+.md-header,
+.md-header__inner,
+.md-header__button,
+.md-header__title,
+.md-header__topic,
+.md-header__source,
+.md-tabs,
+.md-tabs__list,
+.md-tabs__item,
+.md-tabs__link {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Navigation tabs styling */
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+/* Search box in header */
+.md-search__input {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+.md-search__input::placeholder {
+  color: #cccccc !important;
 }
 
 /* Typography - Body text uses Open Sans */
