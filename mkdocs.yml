@@ -16,14 +16,28 @@ theme:
     - search.share
     - content.code.copy
   palette:
+    # Light mode
     - scheme: default
+      primary: custom  # This will use your custom CSS colors
+      accent: custom
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
+    # Dark mode
     - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  # Font configuration
+  font:
+    text: Libre Baskerville
+    code: DM Mono
+
+# Include your custom CSS
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
@@ -32,7 +46,6 @@ plugins:
 markdown_extensions:
   - pymdownx.highlight:
       linenums_style: pymdownx-inline
-
 
 nav:
   - Home: index.md

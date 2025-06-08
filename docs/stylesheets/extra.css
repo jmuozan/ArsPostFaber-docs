@@ -1,0 +1,125 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Root variables for colors */
+:root {
+  /* Custom color palette - adjust these hex codes as needed */
+  --md-primary-fg-color: #f99e4c; /* Your orange color from the image */
+  --md-primary-fg-color--light: #fbb574;
+  --md-primary-fg-color--dark: #e88a39;
+  --md-accent-fg-color: #f99e4c;
+  
+  /* Text colors */
+  --md-default-fg-color: #2c3e50;
+  --md-default-fg-color--light: #7b8a8b;
+  --md-default-fg-color--lighter: #bdc3c7;
+  
+  /* Background colors */
+  --md-default-bg-color: #ffffff;
+  --md-code-bg-color: #f8f9fa;
+}
+
+/* Dark mode colors */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #f99e4c;
+  --md-accent-fg-color: #f99e4c;
+  --md-default-fg-color: #ecf0f1;
+  --md-default-fg-color--light: #bdc3c7;
+  --md-default-bg-color: #2c3e50;
+  --md-code-bg-color: #34495e;
+}
+
+/* Typography - Body text uses Libre Baskerville */
+.md-content, 
+.md-content p,
+.md-content li,
+.md-content td,
+.md-content blockquote {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Typography - Headings, navigation, and UI elements use DM Sans */
+.md-header,
+.md-nav,
+.md-tabs,
+.md-footer,
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Specific heading styles */
+.md-content h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-content h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.md-content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation and menu styling */
+.md-nav__title,
+.md-nav__item,
+.md-tabs__item {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+/* Code blocks - keep monospace */
+.md-typeset code,
+.md-typeset pre,
+.highlight {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Custom button styling */
+.md-button {
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
+
+.md-button:hover {
+  background-color: var(--md-primary-fg-color--dark);
+  border-color: var(--md-primary-fg-color--dark);
+}
+
+/* Search box styling */
+.md-search__input {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Table styling */
+.md-typeset table {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.md-typeset table th {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
