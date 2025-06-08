@@ -52,6 +52,31 @@
   color: #cccccc !important;
 }
 
+/* Custom toggle icons for light/dark mode */
+/* Light mode - show black parasite icon */
+[data-md-color-scheme="default"] .md-header__button.md-icon svg {
+  display: none;
+}
+
+[data-md-color-scheme="default"] .md-header__button.md-icon {
+  background-image: url('icons/parasite_b.png');
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark mode - show white parasite icon */
+[data-md-color-scheme="slate"] .md-header__button.md-icon svg {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-icon {
+  background-image: url('icons/parasite_w.png');
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Typography - Body text uses Open Sans */
 .md-content, 
 .md-content p,
