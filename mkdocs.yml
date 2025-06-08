@@ -1,7 +1,11 @@
 site_name: Ars Post Faber
 site_url: https://mydomain.org/mysite
+
+# Custom logo and favicon
 theme:
   name: material
+  logo: Icons/ascii_output.png
+  favicon: Icons/ascii_output.png
   features:
     - navigation.instant
     - navigation.instant.progress
