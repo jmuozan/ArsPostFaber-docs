@@ -1,6 +1,6 @@
-# Ars Post Faber
+# *Ars Post Faber:* Embedded Knowledge in Digital Workflows
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+With the goal 
 
 ## Commands
 
@@ -11,7 +11,6 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+
+Project repo [HERE](https://github.com/jmuozan/ArsPostFaber).
