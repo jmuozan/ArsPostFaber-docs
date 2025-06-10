@@ -4,8 +4,6 @@ site_url: https://mydomain.org/mysite
 # Custom logo and favicon
 theme:
   name: material
-  logo: icons/ascii_output.png
-  favicon: icons/ascii_output.png
   features:
     - navigation.instant
     - navigation.instant.progress
