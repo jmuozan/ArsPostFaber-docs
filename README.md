@@ -1,6 +1,6 @@
 # Documentation for Ars Post Faber Plug-in
 
-The following repository hosts a mkdocs website to document the developement, usage and purpose of the plug-in *Ars Post Faber* for **Grasshopper** in **Rhino 8** developed by Jorge Muñoz Zanón
+The following repository hosts a mkdocs website to document the developement, usage and purpose of the plug-in *Ars Post Faber* for **Grasshopper** in **Rhino 8** developed by [Jorge Muñoz Zanón](https://www.linkedin.com/in/jorgemunozzanon/)
 
 You can check the code of the plug-in [here](https://github.com/jmuozan/ArsPostFaber) and the documentation website [here](https://jmuozan.github.io/ArsPostFaber-docs/)
 
@@ -40,7 +40,7 @@ source myvenv/bin/activate
 pip install mkdocs-material
 ```
 
-### Create a branch to work on your changes
+###  Create a branch to work on your changes
 
 ```bash
 git branch BRANCH-NAME
