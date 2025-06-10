@@ -54,7 +54,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - How to use:
-    -
+    - Bits to Atoms: howto/bits2atoms.md
   - About: 
     - About the Author: about/about.md
     - Childhood: about/childhood.md
