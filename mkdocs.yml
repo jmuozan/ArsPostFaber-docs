@@ -58,4 +58,6 @@ nav:
   - About: 
     - About the Author: about/about.md
     - Childhood: about/childhood.md
-  - Contribute: contribute/contribute.md
+  - Contribute: 
+    - Project Contribution: contribute/contribute_project.md
+    - Documentation Contribution: contribute/contribute_web.md
