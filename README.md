@@ -30,8 +30,19 @@ python -m venv venv
 
 ### Activate virtual environment
 
+#### MacOS
+
 ```bash
 source myvenv/bin/activate
+```
+
+#### Windows
+
+```bash
+# In cmd.exe
+venv\Scripts\activate.bat
+# In PowerShell
+venv\Scripts\Activate.ps1
 ```
 
 ### Install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
