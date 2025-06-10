@@ -40,7 +40,7 @@ source myvenv/bin/activate
 pip install mkdocs-material
 ```
 
-###  Create a branch to work on your changes
+### Create a branch to work on your changes
 
 ```bash
 git branch BRANCH-NAME
