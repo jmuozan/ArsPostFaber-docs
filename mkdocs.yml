@@ -43,6 +43,30 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# Footer configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/jmuozan
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jorgemunozzanon/
+      name: LinkedIn
+    - icon: fontawesome/solid/globe
+      link: https://your-website.com
+      name: Website
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourusername
+      name: Twitter
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/yourusername
+      name: Instagram
+
+# Copyright text
+copyright: >
+  Copyright &copy; 2024 Jorge Muñoz Zanón - 
+  <a href="#__consent">Change cookie settings</a>
+
 plugins:
   - search
   - blog

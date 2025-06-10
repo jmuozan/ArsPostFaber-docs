@@ -1,4 +1,5 @@
-## How do I contribute to the documentation website?
+## How do I contribute to the Project?
+
 
 Essential to have [git](https://git-scm.com/downloads) installed in your computer
 
