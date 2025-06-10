@@ -51,6 +51,12 @@ venv\Scripts\Activate.ps1
 pip install mkdocs-material
 ```
 
+### Check changes live while editing
+
+```bash
+mkdocs serve
+```
+
 ### Create a Branch to Work on Your Changes
 
 ```bash
