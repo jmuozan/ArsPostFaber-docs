@@ -1,15 +1,12 @@
-# *Ars Post Faber:* Embedded Knowledge in Digital Workflows
+# *Ars Post Faber:* Embedding Knowledge in Digital Workflows
 
-With the goal 
+With the goal of 
 
-## Commands
+## Video
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## The Project
 
-## Project layout
+## 
 
 
 
