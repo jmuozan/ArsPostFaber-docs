@@ -24,15 +24,15 @@ theme:
   palette:
     # Light mode
     - scheme: default
-      primary: black
-      accent: black
+      primary: deep purple  # Use Material's deep purple which we'll override
+      accent: green
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
-      primary: black  # Keep header black
-      accent: black
+      primary: deep purple  # Use Material's deep purple which we'll override
+      accent: green
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode

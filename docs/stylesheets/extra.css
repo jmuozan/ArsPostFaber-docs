@@ -15,17 +15,18 @@
   --md-accent-fg-color: #4A8B2C;   /* Darker green for dark mode */
 }
 
-/* Force header to use purple in light mode, darker purple in dark mode */
-.md-header {
-  background-color: #9C4CCC !important;
-}
-
-[data-md-color-scheme="slate"] .md-header {
-  background-color: #6A2C8A !important;
-}
-
-/* Force all header elements to have proper colors */
+/* COMPREHENSIVE HEADER STYLING */
+/* Remove any Material theme overlays and force exact colors */
 .md-header,
+.md-header::before,
+.md-header::after {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
+/* Force header inner elements to use exact color */
 .md-header__inner,
 .md-header__button,
 .md-header__title,
@@ -36,10 +37,22 @@
 .md-tabs__item,
 .md-tabs__link {
   background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  background-image: none !important;
   color: #ffffff !important;
+  opacity: 1 !important;
 }
 
+/* Dark mode header - force exact dark purple */
 [data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-header::before,
+[data-md-color-scheme="slate"] .md-header::after {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
 [data-md-color-scheme="slate"] .md-header__inner,
 [data-md-color-scheme="slate"] .md-header__button,
 [data-md-color-scheme="slate"] .md-header__title,
@@ -50,7 +63,10 @@
 [data-md-color-scheme="slate"] .md-tabs__item,
 [data-md-color-scheme="slate"] .md-tabs__link {
   background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+  background-image: none !important;
   color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* Make sure header buttons (including toggle) are visible */
@@ -122,10 +138,181 @@
   color: #C4B0D6 !important;
 }
 
-/* Remove the custom parasite icon overrides that were hiding the toggle */
-/* This allows the default toggle icons to show properly */
+/* COMPREHENSIVE FOOTER STYLING */
+/* Footer - ensure exact same colors as header and full width */
+.md-footer,
+.md-footer::before,
+.md-footer::after {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
 
-/* Typography - IBM Plex Mono for ALL text elements */
+.md-footer__inner {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 1rem 1.6rem !important;
+  width: 100% !important;
+}
+
+.md-footer__link,
+.md-footer__direction,
+.md-footer-meta__inner {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Ensure footer meta spans full width */
+.md-footer-meta {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Dark mode footer - exact same color as dark header */
+[data-md-color-scheme="slate"] .md-footer,
+[data-md-color-scheme="slate"] .md-footer::before,
+[data-md-color-scheme="slate"] .md-footer::after {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+  background-image: none !important;
+  opacity: 1 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__inner,
+[data-md-color-scheme="slate"] .md-footer__link,
+[data-md-color-scheme="slate"] .md-footer__direction,
+[data-md-color-scheme="slate"] .md-footer-meta__inner,
+[data-md-color-scheme="slate"] .md-footer-meta {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Footer links and text */
+.md-footer__link,
+.md-footer__direction,
+.md-footer-meta__inner {
+  color: #ffffff !important;
+}
+
+.md-footer__link:hover {
+  color: #cccccc !important;
+}
+
+/* Social icons styling */
+.md-footer-social {
+  padding: 1rem 0;
+}
+
+.md-footer-social__link {
+  display: inline-block;
+  margin: 0 0.5rem;
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.md-footer-social__link:hover {
+  color: #6CBB3C !important;
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .md-footer-social__link:hover {
+  color: #72D143 !important;
+}
+
+/* Copyright text - match header background in both modes */
+.md-footer-copyright {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+  color: #ffffff !important;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 1rem 1.6rem !important;
+  box-sizing: border-box !important;
+}
+
+.md-footer-copyright__highlight {
+  color: #ffffff !important;
+}
+
+.md-footer-copyright a {
+  color: #E6D6F2 !important;
+  text-decoration: underline;
+}
+
+.md-footer-copyright a:hover {
+  color: #6CBB3C !important;
+}
+
+/* Dark mode footer copyright - match dark header */
+[data-md-color-scheme="slate"] .md-footer-copyright {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer-copyright a {
+  color: #C4B0D6 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer-copyright a:hover {
+  color: #72D143 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer-social__link {
+  color: #ffffff !important;
+}
+
+/* Remove any pseudo-elements or overlays that might affect color */
+.md-header *,
+.md-footer * {
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure maximum specificity overrides */
+body .md-header,
+html body .md-header,
+body .md-footer,
+html body .md-footer {
+  background-color: #9C4CCC !important;
+  background: #9C4CCC !important;
+}
+
+body[data-md-color-scheme="slate"] .md-header,
+html[data-md-color-scheme="slate"] body .md-header,
+body[data-md-color-scheme="slate"] .md-footer,
+html[data-md-color-scheme="slate"] body .md-footer {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+}
+
+/* TYPOGRAPHY - IBM Plex Mono for ALL text elements */
 * {
   font-family: 'IBM Plex Mono', monospace !important;
 }
@@ -189,157 +376,7 @@
   font-family: 'IBM Plex Mono', monospace !important;
 }
 
-/* Footer Styling - Match header in both light and dark modes */
-.md-footer {
-  background-color: #9C4CCC !important;
-  color: #ffffff !important;
-  font-family: 'IBM Plex Mono', monospace !important;
-}
-
-.md-footer__inner {
-  background-color: #9C4CCC !important;
-}
-
-.md-footer__link,
-.md-footer__direction,
-.md-footer-meta__inner {
-  color: #ffffff !important;
-  font-family: 'IBM Plex Mono', monospace !important;
-}
-
-/* Dark mode footer - use same dark purple as header with higher specificity */
-[data-md-color-scheme="slate"] .md-footer,
-html[data-md-color-scheme="slate"] .md-footer,
-body[data-md-color-scheme="slate"] .md-footer {
-  background-color: #6A2C8A !important;
-}
-
-[data-md-color-scheme="slate"] .md-footer__inner,
-html[data-md-color-scheme="slate"] .md-footer__inner,
-body[data-md-color-scheme="slate"] .md-footer__inner {
-  background-color: #6A2C8A !important;
-}
-
-[data-md-color-scheme="slate"] .md-footer__link,
-[data-md-color-scheme="slate"] .md-footer__direction,
-[data-md-color-scheme="slate"] .md-footer-meta__inner,
-html[data-md-color-scheme="slate"] .md-footer__link,
-html[data-md-color-scheme="slate"] .md-footer__direction,
-html[data-md-color-scheme="slate"] .md-footer-meta__inner {
-  color: #ffffff !important;
-}
-
-/* Footer links and text */
-.md-footer__link,
-.md-footer__direction,
-.md-footer-meta__inner {
-  color: #ffffff !important;
-}
-
-.md-footer__link:hover {
-  color: #cccccc !important;
-}
-
-/* Social icons styling */
-.md-footer-social {
-  padding: 1rem 0;
-}
-
-.md-footer-social__link {
-  display: inline-block;
-  margin: 0 0.5rem;
-  color: #ffffff !important;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.md-footer-social__link:hover {
-  color: #cccccc !important;
-  transform: translateY(-2px);
-}
-
-/* Footer social links with green accents */
-.md-footer-social__link:hover {
-  color: #6CBB3C !important;
-  transform: translateY(-2px);
-}
-
-[data-md-color-scheme="slate"] .md-footer-social__link:hover {
-  color: #72D143 !important;
-}
-
-/* Copyright text - match header background in both modes */
-.md-footer-copyright {
-  background-color: #9C4CCC !important;
-  color: #ffffff !important;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.md-footer-copyright__highlight {
-  color: #ffffff !important;
-}
-
-.md-footer-copyright a {
-  color: #E6D6F2 !important;
-  text-decoration: underline;
-}
-
-.md-footer-copyright a:hover {
-  color: #6CBB3C !important;
-}
-
-/* Dark mode footer copyright - match dark header */
-[data-md-color-scheme="slate"] .md-footer-copyright {
-  background-color: #6A2C8A !important;
-}
-
-[data-md-color-scheme="slate"] .md-footer-copyright a {
-  color: #C4B0D6 !important;
-}
-
-[data-md-color-scheme="slate"] .md-footer-copyright a:hover {
-  color: #72D143 !important;
-}
-
-[data-md-color-scheme="slate"] .md-footer-social__link {
-  color: #ffffff !important;
-}
-
 /* Only show table of contents on the right */
 .md-nav--secondary {
   display: block;
-}
-
-/* FORCE FOOTER DARK MODE STYLING - Maximum specificity at end of CSS */
-body[data-md-color-scheme="slate"] .md-footer,
-html[data-md-color-scheme="slate"] body .md-footer,
-[data-md-color-scheme="slate"] .md-container .md-footer,
-[data-md-color-scheme="slate"] .md-main .md-footer {
-  background-color: #6A2C8A !important;
-  background: #6A2C8A !important;
-}
-
-body[data-md-color-scheme="slate"] .md-footer__inner,
-html[data-md-color-scheme="slate"] body .md-footer__inner,
-[data-md-color-scheme="slate"] .md-container .md-footer__inner,
-[data-md-color-scheme="slate"] .md-main .md-footer__inner {
-  background-color: #6A2C8A !important;
-  background: #6A2C8A !important;
-}
-
-body[data-md-color-scheme="slate"] .md-footer-copyright,
-html[data-md-color-scheme="slate"] body .md-footer-copyright,
-[data-md-color-scheme="slate"] .md-container .md-footer-copyright {
-  background-color: #6A2C8A !important;
-  background: #6A2C8A !important;
-  color: #ffffff !important;
-}
-
-/* Override any Material theme default */
-.md-footer[data-md-color-scheme="slate"],
-.md-footer-meta[data-md-color-scheme="slate"] {
-  background-color: #6A2C8A !important;
-  background: #6A2C8A !important;
 }
