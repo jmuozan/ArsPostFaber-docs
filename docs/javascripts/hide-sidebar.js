@@ -14,28 +14,50 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function applyIndexPageStyling() {
         const currentPath = window.location.pathname;
-        const isIndexPage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/');
+        // More specific check for index/home page only
+        const isIndexPage = currentPath === '/' || 
+                           currentPath === '/index.html' || 
+                           currentPath === '/index/' ||
+                           currentPath.endsWith('/ArsPostFaber-docs/') ||
+                           (currentPath.includes('/ArsPostFaber-docs/') && currentPath.split('/').pop() === '');
+        
+        const primarySidebar = document.querySelector('.md-sidebar--primary');
+        const mainInner = document.querySelector('.md-main__inner');
+        const content = document.querySelector('.md-content');
         
         if (isIndexPage) {
             const margins = getResponsiveMargins();
             
-            // Hide the primary sidebar (left navigation)
-            const primarySidebar = document.querySelector('.md-sidebar--primary');
+            // Hide the primary sidebar (left navigation) only on home page
             if (primarySidebar) {
                 primarySidebar.style.display = 'none';
             }
             
             // Adjust main content layout with responsive spacing
-            const mainInner = document.querySelector('.md-main__inner');
             if (mainInner) {
                 mainInner.style.marginLeft = margins.margin;
             }
             
-            const content = document.querySelector('.md-content');
             if (content) {
                 content.style.maxWidth = margins.maxWidth;
                 content.style.marginLeft = margins.margin;
                 content.style.marginRight = margins.margin;
+            }
+        } else {
+            // Show sidebar on all other pages
+            if (primarySidebar) {
+                primarySidebar.style.display = 'block';
+            }
+            
+            // Reset to default spacing for other pages
+            if (mainInner) {
+                mainInner.style.marginLeft = '';
+            }
+            
+            if (content) {
+                content.style.maxWidth = '';
+                content.style.marginLeft = '';
+                content.style.marginRight = '';
             }
         }
     }
@@ -53,7 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
         mutations.forEach(function(mutation) {
             if (mutation.type === 'childList') {
                 const currentPath = window.location.pathname;
-                const isIndexPage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/');
+                // More specific check for index/home page only
+                const isIndexPage = currentPath === '/' || 
+                                   currentPath === '/index.html' || 
+                                   currentPath === '/index/' ||
+                                   currentPath.endsWith('/ArsPostFaber-docs/') ||
+                                   (currentPath.includes('/ArsPostFaber-docs/') && currentPath.split('/').pop() === '');
                 
                 const primarySidebar = document.querySelector('.md-sidebar--primary');
                 const mainInner = document.querySelector('.md-main__inner');
@@ -83,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             content.style.marginRight = margin;
                         }
                     } else {
+                        // Show sidebar and reset layout for all other pages
                         primarySidebar.style.display = 'block';
-                        // Reset to default spacing for other pages
                         if (mainInner) mainInner.style.marginLeft = '';
                         if (content) {
                             content.style.maxWidth = '';
