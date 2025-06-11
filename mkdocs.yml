@@ -45,6 +45,10 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# Add JavaScript to handle sidebar hiding on index page
+extra_javascript:
+  - javascripts/hide-sidebar.js
+
 # Footer configuration
 extra:
   social:
@@ -67,7 +71,7 @@ extra:
 # Copyright text
 copyright: >
   Copyright &copy; 2025 Jorge Muñoz Zanón - 
-  Licensed under <a href="https://github.com/jmuozan/ArsPostFaber/blob/main/LICENSE">MIT License</a>
+  Licensed under <a href="https://github.com/jmuozan/ArsPostFaber/blob/main/LICENSE">MIT</a>
 
 plugins:
   - search

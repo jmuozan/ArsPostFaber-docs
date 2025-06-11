@@ -1,23 +1,27 @@
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Custom color palette - Black theme */
+/* Custom color palette - Purple/Green theme */
 :root {
-  --md-primary-fg-color: #000000;
-  --md-primary-fg-color--light: #333333;
-  --md-primary-fg-color--dark: #000000;
-  --md-accent-fg-color: #000000;
+  --md-primary-fg-color: #9C4CCC;  /* Medium purple for light mode */
+  --md-primary-fg-color--light: #B666E6;
+  --md-primary-fg-color--dark: #7A3DA6;
+  --md-accent-fg-color: #6CBB3C;  /* Bright green accent */
 }
 
-/* Dark mode colors - keep header black, only change body */
+/* Dark mode colors - darker purple and green */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #000000;  /* Keep header black */
-  --md-accent-fg-color: #000000;   /* Keep accent black */
+  --md-primary-fg-color: #6A2C8A;  /* Darker purple for dark mode */
+  --md-accent-fg-color: #4A8B2C;   /* Darker green for dark mode */
 }
 
-/* Force header to stay black in both modes */
+/* Force header to use purple in light mode, darker purple in dark mode */
 .md-header {
-  background-color: #000000 !important;
+  background-color: #9C4CCC !important;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #6A2C8A !important;
 }
 
 /* Force all header elements to have proper colors */
@@ -31,7 +35,21 @@
 .md-tabs__list,
 .md-tabs__item,
 .md-tabs__link {
-  background-color: #000000 !important;
+  background-color: #9C4CCC !important;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-header__inner,
+[data-md-color-scheme="slate"] .md-header__button,
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__topic,
+[data-md-color-scheme="slate"] .md-header__source,
+[data-md-color-scheme="slate"] .md-tabs,
+[data-md-color-scheme="slate"] .md-tabs__list,
+[data-md-color-scheme="slate"] .md-tabs__item,
+[data-md-color-scheme="slate"] .md-tabs__link {
+  background-color: #6A2C8A !important;
   color: #ffffff !important;
 }
 
@@ -73,40 +91,58 @@
   color: #ffffff !important;
 }
 
-/* Navigation tabs styling */
+/* Navigation tabs styling - text color change only on hover */
 .md-tabs__link--active,
 .md-tabs__link:hover {
-  background-color: #333333 !important;
-  color: #ffffff !important;
+  background-color: transparent !important;
+  color: #6CBB3C !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  background-color: transparent !important;
+  color: #72D143 !important;
 }
 
 /* Search box in header */
 .md-search__input {
-  background-color: #333333 !important;
+  background-color: #7A3DA6 !important;
   color: #ffffff !important;
 }
 
 .md-search__input::placeholder {
-  color: #cccccc !important;
+  color: #E6D6F2 !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: #4A2C5A !important;
+}
+
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
+  color: #C4B0D6 !important;
 }
 
 /* Remove the custom parasite icon overrides that were hiding the toggle */
 /* This allows the default toggle icons to show properly */
 
-/* Typography - Body text uses Open Sans */
+/* Typography - IBM Plex Mono for ALL text elements */
+* {
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Body text, paragraphs, lists - ALL use IBM Plex Mono */
 .md-content, 
 .md-content p,
 .md-content li,
 .md-content td,
-.md-content blockquote {
-  font-family: 'Open Sans', sans-serif;
+.md-content blockquote,
+.md-content div,
+.md-content span,
+.md-typeset {
+  font-family: 'IBM Plex Mono', monospace !important;
 }
 
-/* Typography - Headings and navigation use Ubuntu */
-.md-header,
-.md-nav,
-.md-tabs,
-.md-footer,
+/* Headings use IBM Plex Mono with purple color */
 .md-content h1,
 .md-content h2,
 .md-content h3,
@@ -118,23 +154,79 @@
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5,
-.md-typeset h6,
+.md-typeset h6 {
+  font-family: 'IBM Plex Mono', monospace !important;
+  color: #9C4CCC !important;
+  font-weight: 500;
+}
+
+[data-md-color-scheme="slate"] .md-content h1,
+[data-md-color-scheme="slate"] .md-content h2,
+[data-md-color-scheme="slate"] .md-content h3,
+[data-md-color-scheme="slate"] .md-content h4,
+[data-md-color-scheme="slate"] .md-content h5,
+[data-md-color-scheme="slate"] .md-content h6,
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+  color: #B666E6 !important;
+}
+
+/* Navigation and interface use IBM Plex Mono */
+.md-header,
+.md-nav,
+.md-tabs,
+.md-footer,
 .md-nav__title,
 .md-nav__item,
 .md-tabs__item,
-.md-search__input {
-  font-family: 'Ubuntu', sans-serif;
+.md-search__input,
+.md-nav__link,
+.md-tabs__link {
+  font-family: 'IBM Plex Mono', monospace !important;
 }
 
-/* Footer Styling */
+/* Footer Styling - Match header in both light and dark modes */
 .md-footer {
-  background-color: #000000 !important;
+  background-color: #9C4CCC !important;
   color: #ffffff !important;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'IBM Plex Mono', monospace !important;
 }
 
 .md-footer__inner {
-  background-color: #000000 !important;
+  background-color: #9C4CCC !important;
+}
+
+.md-footer__link,
+.md-footer__direction,
+.md-footer-meta__inner {
+  color: #ffffff !important;
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Dark mode footer - use same dark purple as header with higher specificity */
+[data-md-color-scheme="slate"] .md-footer,
+html[data-md-color-scheme="slate"] .md-footer,
+body[data-md-color-scheme="slate"] .md-footer {
+  background-color: #6A2C8A !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__inner,
+html[data-md-color-scheme="slate"] .md-footer__inner,
+body[data-md-color-scheme="slate"] .md-footer__inner {
+  background-color: #6A2C8A !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer__link,
+[data-md-color-scheme="slate"] .md-footer__direction,
+[data-md-color-scheme="slate"] .md-footer-meta__inner,
+html[data-md-color-scheme="slate"] .md-footer__link,
+html[data-md-color-scheme="slate"] .md-footer__direction,
+html[data-md-color-scheme="slate"] .md-footer-meta__inner {
+  color: #ffffff !important;
 }
 
 /* Footer links and text */
@@ -166,9 +258,19 @@
   transform: translateY(-2px);
 }
 
-/* Copyright text */
+/* Footer social links with green accents */
+.md-footer-social__link:hover {
+  color: #6CBB3C !important;
+  transform: translateY(-2px);
+}
+
+[data-md-color-scheme="slate"] .md-footer-social__link:hover {
+  color: #72D143 !important;
+}
+
+/* Copyright text - match header background in both modes */
 .md-footer-copyright {
-  background-color: #000000;
+  background-color: #9C4CCC !important;
   color: #ffffff !important;
   text-align: center;
   padding: 1rem;
@@ -180,27 +282,64 @@
 }
 
 .md-footer-copyright a {
-  color: #cccccc !important;
+  color: #E6D6F2 !important;
   text-decoration: underline;
 }
 
 .md-footer-copyright a:hover {
-  color: #ffffff !important;
+  color: #6CBB3C !important;
 }
 
-/* Dark mode footer adjustments */
-[data-md-color-scheme="slate"] .md-footer {
-  background-color: #000000 !important;
+/* Dark mode footer copyright - match dark header */
+[data-md-color-scheme="slate"] .md-footer-copyright {
+  background-color: #6A2C8A !important;
 }
 
-[data-md-color-scheme="slate"] .md-footer__inner {
-  background-color: #000000 !important;
+[data-md-color-scheme="slate"] .md-footer-copyright a {
+  color: #C4B0D6 !important;
+}
+
+[data-md-color-scheme="slate"] .md-footer-copyright a:hover {
+  color: #72D143 !important;
 }
 
 [data-md-color-scheme="slate"] .md-footer-social__link {
   color: #ffffff !important;
 }
 
-[data-md-color-scheme="slate"] .md-footer-social__link:hover {
-  color: #cccccc !important;
+/* Only show table of contents on the right */
+.md-nav--secondary {
+  display: block;
+}
+
+/* FORCE FOOTER DARK MODE STYLING - Maximum specificity at end of CSS */
+body[data-md-color-scheme="slate"] .md-footer,
+html[data-md-color-scheme="slate"] body .md-footer,
+[data-md-color-scheme="slate"] .md-container .md-footer,
+[data-md-color-scheme="slate"] .md-main .md-footer {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+}
+
+body[data-md-color-scheme="slate"] .md-footer__inner,
+html[data-md-color-scheme="slate"] body .md-footer__inner,
+[data-md-color-scheme="slate"] .md-container .md-footer__inner,
+[data-md-color-scheme="slate"] .md-main .md-footer__inner {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+}
+
+body[data-md-color-scheme="slate"] .md-footer-copyright,
+html[data-md-color-scheme="slate"] body .md-footer-copyright,
+[data-md-color-scheme="slate"] .md-container .md-footer-copyright {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
+  color: #ffffff !important;
+}
+
+/* Override any Material theme default */
+.md-footer[data-md-color-scheme="slate"],
+.md-footer-meta[data-md-color-scheme="slate"] {
+  background-color: #6A2C8A !important;
+  background: #6A2C8A !important;
 }
