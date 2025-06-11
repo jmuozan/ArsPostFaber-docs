@@ -35,6 +35,44 @@
   color: #ffffff !important;
 }
 
+/* Make sure header buttons (including toggle) are visible */
+.md-header__button {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Remove hover effects from header buttons */
+.md-header__button:hover {
+  background-color: transparent !important;
+}
+
+/* Ensure the toggle button SVG is visible */
+.md-header__button svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* GitHub repository button styling - remove gray background */
+.md-header__source {
+  background-color: transparent !important;
+}
+
+.md-source {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Remove hover effects from GitHub repo button */
+.md-source:hover {
+  background-color: transparent !important;
+}
+
+.md-source__icon,
+.md-source__repository {
+  color: #ffffff !important;
+}
+
 /* Navigation tabs styling */
 .md-tabs__link--active,
 .md-tabs__link:hover {
@@ -52,30 +90,8 @@
   color: #cccccc !important;
 }
 
-/* Custom toggle icons for light/dark mode */
-/* Light mode - show black parasite icon */
-[data-md-color-scheme="default"] .md-header__button.md-icon svg {
-  display: none;
-}
-
-[data-md-color-scheme="default"] .md-header__button.md-icon {
-  background-image: url('icons/parasite_b.png');
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Dark mode - show white parasite icon */
-[data-md-color-scheme="slate"] .md-header__button.md-icon svg {
-  display: none;
-}
-
-[data-md-color-scheme="slate"] .md-header__button.md-icon {
-  background-image: url('icons/parasite_w.png');
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+/* Remove the custom parasite icon overrides that were hiding the toggle */
+/* This allows the default toggle icons to show properly */
 
 /* Typography - Body text uses Open Sans */
 .md-content, 

@@ -1,5 +1,7 @@
 site_name: Ars Post Faber
 site_url: https://mydomain.org/mysite
+repo_url: https://github.com/jmuozan/ArsPostFaber
+repo_name: jmuozan/ArsPostFaber
 
 # Custom logo and favicon
 theme:
@@ -13,7 +15,6 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
     - navigation.expand
     - navigation.top
     - search.suggest
@@ -73,6 +74,9 @@ plugins:
   - blog
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight:
       linenums_style: pymdownx-inline
 
