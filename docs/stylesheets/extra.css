@@ -380,3 +380,124 @@ html[data-md-color-scheme="slate"] body .md-footer {
 .md-nav--secondary {
   display: block;
 }
+
+/* BOLD AND ITALIC TEXT STYLING - Electric Green */
+/* Bold text in paragraphs and content */
+.md-content strong,
+.md-content b,
+.md-typeset strong,
+.md-typeset b,
+p strong,
+p b,
+li strong,
+li b,
+td strong,
+td b,
+blockquote strong,
+blockquote b {
+  color: #6CBB3C !important;
+  font-weight: bold;
+}
+
+/* Italic text in paragraphs and content */
+.md-content em,
+.md-content i,
+.md-typeset em,
+.md-typeset i,
+p em,
+p i,
+li em,
+li i,
+td em,
+td i,
+blockquote em,
+blockquote i {
+  color: #6CBB3C !important;
+  font-style: italic;
+}
+
+/* Bold + Italic combination */
+.md-content strong em,
+.md-content em strong,
+.md-content b i,
+.md-content i b,
+.md-typeset strong em,
+.md-typeset em strong,
+.md-typeset b i,
+.md-typeset i b,
+p strong em,
+p em strong,
+p b i,
+p i b,
+li strong em,
+li em strong,
+li b i,
+li i b,
+td strong em,
+td em strong,
+td b i,
+td i b,
+blockquote strong em,
+blockquote em strong,
+blockquote b i,
+blockquote i b {
+  color: #6CBB3C !important;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Dark mode - slightly brighter green for better contrast */
+[data-md-color-scheme="slate"] .md-content strong,
+[data-md-color-scheme="slate"] .md-content b,
+[data-md-color-scheme="slate"] .md-content em,
+[data-md-color-scheme="slate"] .md-content i,
+[data-md-color-scheme="slate"] .md-typeset strong,
+[data-md-color-scheme="slate"] .md-typeset b,
+[data-md-color-scheme="slate"] .md-typeset em,
+[data-md-color-scheme="slate"] .md-typeset i,
+[data-md-color-scheme="slate"] p strong,
+[data-md-color-scheme="slate"] p b,
+[data-md-color-scheme="slate"] p em,
+[data-md-color-scheme="slate"] p i,
+[data-md-color-scheme="slate"] li strong,
+[data-md-color-scheme="slate"] li b,
+[data-md-color-scheme="slate"] li em,
+[data-md-color-scheme="slate"] li i,
+[data-md-color-scheme="slate"] td strong,
+[data-md-color-scheme="slate"] td b,
+[data-md-color-scheme="slate"] td em,
+[data-md-color-scheme="slate"] td i,
+[data-md-color-scheme="slate"] blockquote strong,
+[data-md-color-scheme="slate"] blockquote b,
+[data-md-color-scheme="slate"] blockquote em,
+[data-md-color-scheme="slate"] blockquote i {
+  color: #72D143 !important;
+}
+
+/* Dark mode bold + italic combinations */
+[data-md-color-scheme="slate"] .md-content strong em,
+[data-md-color-scheme="slate"] .md-content em strong,
+[data-md-color-scheme="slate"] .md-content b i,
+[data-md-color-scheme="slate"] .md-content i b,
+[data-md-color-scheme="slate"] .md-typeset strong em,
+[data-md-color-scheme="slate"] .md-typeset em strong,
+[data-md-color-scheme="slate"] .md-typeset b i,
+[data-md-color-scheme="slate"] .md-typeset i b,
+[data-md-color-scheme="slate"] p strong em,
+[data-md-color-scheme="slate"] p em strong,
+[data-md-color-scheme="slate"] p b i,
+[data-md-color-scheme="slate"] p i b,
+[data-md-color-scheme="slate"] li strong em,
+[data-md-color-scheme="slate"] li em strong,
+[data-md-color-scheme="slate"] li b i,
+[data-md-color-scheme="slate"] li i b,
+[data-md-color-scheme="slate"] td strong em,
+[data-md-color-scheme="slate"] td em strong,
+[data-md-color-scheme="slate"] td b i,
+[data-md-color-scheme="slate"] td i b,
+[data-md-color-scheme="slate"] blockquote strong em,
+[data-md-color-scheme="slate"] blockquote em strong,
+[data-md-color-scheme="slate"] blockquote b i,
+[data-md-color-scheme="slate"] blockquote i b {
+  color: #72D143 !important;
+}
