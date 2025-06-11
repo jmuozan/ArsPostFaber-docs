@@ -4,6 +4,9 @@ site_url: https://mydomain.org/mysite
 # Custom logo and favicon
 theme:
   name: material
+  # Add logo and favicon configuration
+  logo: icons/logo.svg
+  favicon: icons/logo.svg
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -44,26 +47,26 @@ extra_css:
 # Footer configuration
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/jmuozan
-      name: GitHub
+    - icon: fontawesome/solid/globe
+      link: https://jmuozan.github.io/docs/
+      name: Website
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jorgemunozzanon/
       name: LinkedIn
-    - icon: fontawesome/solid/globe
-      link: https://your-website.com
-      name: Website
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/yourusername
+      link: https://twitter.com/jorgemunyozz
       name: Twitter
     - icon: fontawesome/brands/instagram
-      link: https://instagram.com/yourusername
+      link: https://www.instagram.com/jmuozan
       name: Instagram
+    - icon: fontawesome/brands/github
+      link: https://github.com/jmuozan
+      name: GitHub
 
 # Copyright text
 copyright: >
-  Copyright &copy; 2024 Jorge Muñoz Zanón - 
-  <a href="#__consent">Change cookie settings</a>
+  Copyright &copy; 2025 Jorge Muñoz Zanón - 
+  Licensed under <a href="https://github.com/jmuozan/ArsPostFaber/blob/main/LICENSE">MIT License</a>
 
 plugins:
   - search
