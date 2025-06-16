@@ -7,8 +7,6 @@ repo_name: jmuozan/ArsPostFaber
 theme:
   name: material
   # Add logo and favicon configuration
-  logo: icons/logo.svg
-  favicon: icons/logo.svg
   features:
     - navigation.instant
     - navigation.instant.progress
