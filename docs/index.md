@@ -1,7 +1,7 @@
 # *Ars Post Faber:* Embedding Creative Agency in Computational Systems
 
 <div style="margin: 2rem 0;">
-<iframe width="100%" height="400" src="https://youtu.be/0qtxDXvp2g4?si=Izl233SuFq6T3xhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100%;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0qtxDXvp2g4?si=ac7o93qbtZ_BtiOC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width: 100%;"></iframe>
 </div>
 
 ## The Context
