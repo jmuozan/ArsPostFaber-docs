@@ -85,8 +85,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - How to use:
-    - Bits to Atoms: howto/bits2atoms.md
-    - Atoms to Bits: howto/atoms2bits.md
+    - Components: docs/howto/components.md
+    - Draw2D: docs/howto/scan.md
+    - Photogrammetry: docs/howto/scan.md
   - About:
     - About the Author: about/about.md
     - About the Project: about/project.md
