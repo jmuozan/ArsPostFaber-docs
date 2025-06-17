@@ -85,9 +85,14 @@ markdown_extensions:
 nav:
   - Home: index.md
   - How to use:
-    - Components: docs/howto/components.md
-    - Draw2D: docs/howto/scan.md
-    - Photogrammetry: docs/howto/scan.md
+    - Draw2D: docs/components/Draw2D.md
+    - Path2GCode: docs/components/Path2GCode.md
+    - MeshCrop: docs/components/MeshCrop.md
+    - MeshEdit: docs/components/MeshEdit.md
+    - Photogrammetry: docs/howto/Photogrammetry.md
+    - SerialControl: docs/components/SerialControl.md
+    - Slicer: docs/components/SlicerComponents.md
+    - ComponentThatMakes: docs/components/LLM.md
   - About:
     - About the Author: about/about.md
     - About the Project: about/project.md
